@@ -82,7 +82,19 @@ public class PictureTester
     swan.edgeDetection(10);
     swan.explore();
   }
+
+  public static void testMirrorVerticalRightToLeft() {
+        Picture swan = new Picture("swan.jpg");
+        swan.explore();
+        swan.mirrorVerticalRightToLeft();
+  }
   
+  public static void testMirrorHorizontalBotToTop() {
+        Picture swan = new Picture("swan.jpg");
+        swan.explore();
+        swan.mirrorHorizontalBotToTop();
+  }
+
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -94,10 +106,11 @@ public class PictureTester
    testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
+    testMirrorHorizontalBotToTop();
     testNegate();
     testGrayscale();
     testFixUnderwater();
-    //testMirrorVertical();
+    testMirrorVertical();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
