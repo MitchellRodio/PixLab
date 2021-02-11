@@ -74,6 +74,13 @@ public class PictureTester
     canvas.createCollage();
     canvas.explore();
   }
+
+  public static void testMyCopy()
+  {
+    Picture canvas = new Picture("swan.jpg", "swan.jpg", "swan.jpg", "swan.jpg", "swan.jpg", "swan.jpg", "swan.jpg");
+    canvas.myCopy();
+    canvas.explore();
+  }
   
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
@@ -129,9 +136,8 @@ public class PictureTester
     testMirrorTemple();
     testMirrorGul();
     //testMirrorArms();
-    //testMirrorGull();
     //testMirrorDiagonal();
-    //testCollage();
+   /testCollage();
     //testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
