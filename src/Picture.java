@@ -183,6 +183,24 @@ public class Picture extends SimplePicture {
   }
 }
 
+public void edgeDetection(int edgeDist) {
+  Pixel leftPixel = null;
+  Pixel rightPixel = null;
+  Pixel[][] pixels = this.getPixels2D();
+  Color rightColor = null;
+  for (int row = 0; row < pixels.length; row++) {
+    for (int col = 0;
+    col < pixels[0].length - 1; col++) {
+      leftPixel = pixels[row][col];
+      rightPixel = pixels[row][col + 1];
+      rightColor = rightPixel.getColor();
+      if (leftPixel.colorDistance(rightColor) > edgeDist) leftPixel.setColor(Color.BLACK);
+      else leftPixel.setColor(Color.WHITE);
+    }
+  }
+}
+
+
   /** Mirror just part of a picture of a temple */
   public void mirrorTemple() {
     int count = 0;
